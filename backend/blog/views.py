@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from django.views.generic import ListView
+from rest_framework.generics import ListAPIView
 
 
-class ArticleList(ListView):
+class ArticleList(ListAPIView):
     pass

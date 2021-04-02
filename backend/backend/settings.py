@@ -40,10 +40,15 @@ INSTALLED_APPS = [
 
     # Local apps
     'blog.apps.BlogConfig',
+    'accounts.apps.AccountsConfig',
 
+    # ThirdPartyApps
+    'rest_framework',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -122,3 +127,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Django cors headers 
+CORS_ALLOW_ALL_ORIGINS = True
