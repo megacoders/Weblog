@@ -130,3 +130,7 @@ STATIC_URL = '/static/'
 
 # Django cors headers 
 CORS_ALLOW_ALL_ORIGINS = True
+
+
+# Custom
+MAX_UPLOAD_ADMIN_SIZE = 2097152  # 2 MB (2000000)

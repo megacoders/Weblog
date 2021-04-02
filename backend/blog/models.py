@@ -1,6 +1,14 @@
 from django.db import models
-from accounts.models import User # not created yet
 from django.urls import reverse
+from django.core.files.images import get_image_dimensions
+from accounts.models import User # not created yet
+from django.conf import settings
+
+
+def validate_cover(value):
+    size = get_image_dimensions(value)
+    if size > settings.MAX_UPLOAD_ADMIN_SIZE:
+        raise ValueError("Please keep file size under 2 MB")
 
 
 class Category(models.Model):
