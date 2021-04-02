@@ -1,6 +1,14 @@
 from django.db import models
 from accounts.models import User # not created yet
-from django.urls import reveres
+from django.urls import reverse
+
+
+class Category(models.Model):
+    name = models.CharField(max_length=100)
+    slug = models.SlugField(max_length=100)
+
+    def __str__(self):
+        return self.title
 
 
 class Article(models.Model):
@@ -23,7 +31,6 @@ class Article(models.Model):
 
     def __str__(self):
         return f'{self.user} created {self.title}'
-
 
     def get_absolute_url(self):
 	    return reverse('blog:article_detail', args=[self.id, self.slug])
