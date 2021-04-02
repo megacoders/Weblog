@@ -15,17 +15,18 @@ class Article(models.Model):
     """
         NOTE: 
             1- The user models is not created, 
-            2- The user field must be null because of on_delete
+            2- The author field must be null because of on_delete
             3- The descritpion will change to ckediter fields
     """
     STATUS_CHOICES = (
         ('d', 'draft'),
         ('p', "publish"),
     )
-    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+    author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     title = models.CharField(max_length=250)
     description = models.TextField()
+    cover = models.ImageField()
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
