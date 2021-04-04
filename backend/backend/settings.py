@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Local apps
-    'blog.apps.BlogConfig',
+    'blog.apps.BlogConfig', # This app will handle api stuffs
     'accounts.apps.AccountsConfig',
 
     # ThirdPartyApps
