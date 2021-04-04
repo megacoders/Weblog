@@ -3,7 +3,7 @@ from .models import Article, Category
 
 
 class ArticleAdmin(admin.ModelAdmin):
-    list_display = ('title', 'author', 'created', 'image')
+    list_display = ('title', 'author', 'created', 'cover')
     list_filter = ('title', 'created', 'author')
     prepopulated_fields = {'slug': ('title',)}
 

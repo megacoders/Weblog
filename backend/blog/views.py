@@ -1,6 +1,8 @@
-from django.shortcuts import render
 from rest_framework.generics import ListAPIView
+from .models import Article
+from .serializers import ArticleSerializer
 
 
 class ArticleList(ListAPIView):
-    pass
+    queryset = Article.objects.all()
+    serializer_class = ArticleSerializer

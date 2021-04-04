@@ -16,7 +16,7 @@ class Category(models.Model):
     slug = models.SlugField(max_length=100)
 
     def __str__(self):
-        return self.title
+        return self.name
 
 
 class Article(models.Model):
@@ -33,6 +33,7 @@ class Article(models.Model):
     author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     title = models.CharField(max_length=250)
+    slug = models.SlugField(unique=True)
     description = models.TextField()
     cover = models.ImageField()
     created = models.DateTimeField(auto_now_add=True)
@@ -40,10 +41,8 @@ class Article(models.Model):
 
 
     def __str__(self):
-        return f'{self.user} created {self.title}'
+        return f'{self.author} created {self.title}'
 
-    def get_absolute_url(self):
-	    return reverse('blog:article_detail', args=[self.id, self.slug])
 
 
 

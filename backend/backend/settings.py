@@ -132,5 +132,8 @@ STATIC_URL = '/static/'
 CORS_ALLOW_ALL_ORIGINS = True
 
 
+# User
+AUTH_USER_MODEL = 'accounts.User'
+
 # Custom
 MAX_UPLOAD_ADMIN_SIZE = 2097152  # 2 MB (2000000)
