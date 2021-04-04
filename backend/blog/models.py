@@ -34,7 +34,7 @@ class Article(models.Model):
     title = models.CharField(max_length=250)
     slug = models.SlugField(unique=True)
     description = models.TextField()
-    cover = models.ImageField()
+    cover = models.ImageField(upload_to='backend/media')
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 

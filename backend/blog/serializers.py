@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from .models import Article
-from accounts.modelsi import User
+from accounts.models import User
+
 
 class ArticleSerializer(serializers.ModelSerializer):
     class Meta:
