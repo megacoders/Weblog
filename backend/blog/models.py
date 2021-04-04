@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models.base import Model
 from django.urls import reverse
 from django.core.files.images import get_image_dimensions
 from accounts.models import User # not created yet
@@ -44,6 +45,13 @@ class Article(models.Model):
         return f'{self.author} created {self.title}'
 
 
+class AboutUsModel(models.Model):
+    text = models.TextField()
 
+
+class ContactUsModel(models.Model):
+    title = models.CharField(max_length=100)
+    phone = models.IntegerField()
+    body = models.TextField()
 
 
