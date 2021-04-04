@@ -1,6 +1,4 @@
 from django.db import models
-from django.db.models.base import Model
-from django.urls import reverse
 from django.core.files.images import get_image_dimensions
 from accounts.models import User # not created yet
 from django.conf import settings
