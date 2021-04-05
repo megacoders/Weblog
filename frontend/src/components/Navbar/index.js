@@ -10,7 +10,7 @@ import {
   Link,
   Text,
 } from '@chakra-ui/react';
-
+import UserAvatar from './UserAvatar/UserAvatar';
 const Navbar = () => {
   return (
     <Box as="header" py="5" boxShadow="sm">
@@ -24,12 +24,15 @@ const Navbar = () => {
           <Text as="h1" fontSize="lg">
             وبلاگ
           </Text>
-          <InputGroup w="72">
-            <InputRightElement pointerEvents="none">
-              <AiOutlineSearch color="#A0AEC0" />
-            </InputRightElement>
-            <Input type="tel" placeholder="دنبال چی میگردی؟" />
-          </InputGroup>
+          <Box display="flex" alignItems="center">
+            <InputGroup w="72" margin="0 1rem 0 0">
+              <InputRightElement pointerEvents="none">
+                <AiOutlineSearch color="#A0AEC0" />
+              </InputRightElement>
+              <Input type="tel" placeholder="دنبال چی میگردی؟" />
+            </InputGroup>
+            <UserAvatar />
+          </Box>
         </Box>
         <HStack as="nav" spacing="3">
           <Link color="gray.600" fontSize="sm">
