@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
 import {
   Box,
@@ -11,7 +11,17 @@ import {
   Text,
 } from '@chakra-ui/react';
 import UserAvatar from './UserAvatar/UserAvatar';
+import Backkdrop from '../UI/Backdrop';
+
 const Navbar = () => {
+  const [showBacksrop, setShowBackdrop] = useState(false);
+
+  const handleOpenBackdrop = () => {
+    setShowBackdrop(prevState => !prevState);
+  };
+  const handleCloseBackdrop = () => {
+    setShowBackdrop(prevState => !prevState);
+  };
   return (
     <Box as="header" py="5" boxShadow="sm">
       <Container maxW="container.lg">
@@ -31,7 +41,8 @@ const Navbar = () => {
               </InputRightElement>
               <Input type="tel" placeholder="دنبال چی میگردی؟" />
             </InputGroup>
-            <UserAvatar />
+            <UserAvatar openBackdrop={handleOpenBackdrop} />
+            <Backkdrop show={showBacksrop} close={handleCloseBackdrop} />
           </Box>
         </Box>
         <HStack as="nav" spacing="3">
