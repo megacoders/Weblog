@@ -1,6 +1,7 @@
 import React from 'react';
 
 import PageInfo from '../components/PageInfo';
+import Navbar from '../components/Navbar';
 
 const Home = () => {
   return (
@@ -12,7 +13,7 @@ const Home = () => {
         image=""
         url=""
       />
-      <h1>صفحه اصلی</h1>
+      <Navbar />
     </>
   );
 };
