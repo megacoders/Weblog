@@ -16,8 +16,8 @@ const profileMenu = () => {
       </MenuButton>
       <MenuList>
         <MenuItem>حساب کاربری</MenuItem>
-        <MenuItem>تنظیمات</MenuItem>
         <MenuItem>نوشته های من</MenuItem>
+        <MenuItem>تنظیمات</MenuItem>
         <MenuDivider />
         <MenuItem>خروج از حساب کاربری</MenuItem>
       </MenuList>
