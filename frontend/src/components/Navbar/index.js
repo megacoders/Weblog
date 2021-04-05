@@ -11,11 +11,17 @@ import {
   Text,
 } from '@chakra-ui/react';
 import ProfileMenu from './ProfileMenu/ProfileMenu';
+import SideDrawer from './SideDrawer/SideDrawer';
 
 const Navbar = () => {
   return (
     <>
-      <Box as="header" py="5" boxShadow="sm">
+      <Box
+        as="header"
+        py="5"
+        boxShadow="sm"
+        display={{ base: 'none', lg: 'block' }}
+      >
         <Container maxW="container.lg">
           <Box
             mb="5"
@@ -55,6 +61,7 @@ const Navbar = () => {
           </HStack>
         </Container>
       </Box>
+      <SideDrawer />
     </>
   );
 };
