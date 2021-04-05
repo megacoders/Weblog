@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
 import {
   Box,
@@ -10,18 +10,9 @@ import {
   Link,
   Text,
 } from '@chakra-ui/react';
-import UserAvatar from './UserAvatar/UserAvatar';
-import Backkdrop from '../UI/Backdrop';
+import ProfileMenu from './ProfileMenu/ProfileMenu';
 
 const Navbar = () => {
-  // open/close profile menu's backdrop
-  const [showMenu, setShowMenu] = useState(false);
-  const handleOpenMenu = () => {
-    setShowMenu(prevState => !prevState);
-  };
-  const handleClosemenu = () => {
-    setShowMenu(prevState => !prevState);
-  };
   return (
     <>
       <Box as="header" py="5" boxShadow="sm">
@@ -42,8 +33,7 @@ const Navbar = () => {
                 </InputRightElement>
                 <Input type="tel" placeholder="دنبال چی میگردی؟" />
               </InputGroup>
-              <UserAvatar show={showMenu} openMenu={handleOpenMenu} />
-              <Backkdrop show={showMenu} close={handleClosemenu} />
+              <ProfileMenu />
             </Box>
           </Box>
           <HStack as="nav" spacing="3">

@@ -1,27 +1,28 @@
-import { Divider, List, ListIcon, ListItem } from '@chakra-ui/layout';
+import {
+  Menu,
+  MenuButton,
+  MenuDivider,
+  MenuItem,
+  MenuList,
+} from '@chakra-ui/menu';
 import React from 'react';
-import { BsFillPersonFill } from 'react-icons/bs';
+import UserAvatar from '../UserAvatar/UserAvatar';
 
-const profileMenu = ({ show }) => {
-  const menu = show ? (
-    <List spacing={3} position="absolute">
-      <ListItem>
-        <ListIcon as={BsFillPersonFill} color="green.500" />
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit
-      </ListItem>
-      <Divider />
-      <ListItem>
-        <ListIcon as={BsFillPersonFill} color="green.500" />
-        Assumenda, quia temporibus eveniet a libero incidunt suscipit
-      </ListItem>
-      <ListItem>
-        <ListIcon as={BsFillPersonFill} color="green.500" />
-        Quidem, ipsam illum quis sed voluptatum quae eum fugit earum
-      </ListItem>
-    </List>
-  ) : null;
-
-  return <>{menu}</>;
+const profileMenu = () => {
+  return (
+    <Menu>
+      <MenuButton aria-label="Options" size="sm" variant="outline">
+        <UserAvatar />
+      </MenuButton>
+      <MenuList>
+        <MenuItem>حساب کاربری</MenuItem>
+        <MenuItem>تنظیمات</MenuItem>
+        <MenuItem>نوشته های من</MenuItem>
+        <MenuDivider />
+        <MenuItem>خروج از حساب کاربری</MenuItem>
+      </MenuList>
+    </Menu>
+  );
 };
 
 export default profileMenu;
