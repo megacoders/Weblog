@@ -36,20 +36,20 @@ const Navbar = () => {
               <ProfileMenu />
             </Box>
           </Box>
-          <HStack as="nav" spacing="3">
-            <Link color="gray.600" fontSize="sm">
+          <HStack as="nav" spacing="4">
+            <Link color="gray.600" fontSize="md">
               صفحه اصلی
             </Link>
-            <Link color="gray.600" fontSize="sm">
+            <Link color="gray.600" fontSize="md">
               جدترین پست‌ها
             </Link>
-            <Link color="gray.600" fontSize="sm">
+            <Link color="gray.600" fontSize="md">
               مهندسی نرم‌افزار
             </Link>
-            <Link color="gray.600" fontSize="sm">
+            <Link color="gray.600" fontSize="md">
               تجربه کاربری
             </Link>
-            <Link color="gray.600" fontSize="sm">
+            <Link color="gray.600" fontSize="md">
               امنیت سایبری
             </Link>
           </HStack>
