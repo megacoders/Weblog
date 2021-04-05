@@ -10,7 +10,7 @@ import UserAvatar from '../UserAvatar/UserAvatar';
 
 const profileMenu = () => {
   return (
-    <Menu>
+    <Menu closeOnSelect={false}>
       <MenuButton aria-label="Options" size="sm" variant="outline">
         <UserAvatar />
       </MenuButton>
