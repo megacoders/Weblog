@@ -38,7 +38,7 @@ const Navbar = () => {
                 <InputRightElement pointerEvents="none">
                   <AiOutlineSearch color="#A0AEC0" />
                 </InputRightElement>
-                <Input type="tel" placeholder="دنبال چی میگردی؟" />
+                <Input type="text" placeholder="دنبال چی میگردی؟" />
               </InputGroup>
               <ProfileMenu />
             </Box>
