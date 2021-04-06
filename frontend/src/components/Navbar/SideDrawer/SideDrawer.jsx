@@ -31,8 +31,6 @@ const sideDrawer = () => {
         padding={{ base: '0.5rem', md: '0.7rem' }}
         bgColor="gray.600"
       >
-        <ProfileMenu />
-        <Link color="white">وبلاگ</Link>
         <Button
           ref={btnRef}
           background="transparent"
@@ -42,10 +40,12 @@ const sideDrawer = () => {
         >
           <CgMenuGridO color="white" size="30" />
         </Button>
+        <Link color="white">وبلاگ</Link>
+        <ProfileMenu />
       </Box>
       <Drawer
         isOpen={isOpen}
-        placement="right"
+        placement="left"
         onClose={onClose}
         finalFocusRef={btnRef}
       >
