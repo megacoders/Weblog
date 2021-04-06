@@ -28,11 +28,19 @@ const sideDrawer = () => {
         display={{ base: 'flex', lg: 'none' }}
         justifyContent="space-between"
         alignItems="center"
-        padding={{ base: '0.3rem', md: '0.7rem' }}
+        padding={{ base: '0.5rem', md: '0.7rem' }}
+        bgColor="gray.600"
       >
         <ProfileMenu />
-        <Button ref={btnRef} background="gray.600" onClick={onOpen}>
-          <CgMenuGridO color="white" size="2rem" />
+        <Link color="white">وبلاگ</Link>
+        <Button
+          ref={btnRef}
+          background="transparent"
+          padding="0"
+          onClick={onOpen}
+          _hover={{ color: 'gray.600' }}
+        >
+          <CgMenuGridO color="white" size="30" />
         </Button>
       </Box>
       <Drawer
