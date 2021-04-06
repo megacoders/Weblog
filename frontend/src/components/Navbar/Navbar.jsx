@@ -25,7 +25,7 @@ const Navbar = () => {
       >
         <Container maxW="container.lg">
           <Box
-            mb="5"
+            mb="8"
             display="flex"
             alignItems="center"
             justifyContent="space-between"
@@ -44,20 +44,54 @@ const Navbar = () => {
             </Box>
           </Box>
           <HStack as="nav" spacing="4">
-            <Link color="gray.600" fontSize="md">
+            <Link
+              color="gray.600"
+              fontSize="13px"
+              _hover={{ textDecoration: 'none' }}
+            >
               صفحه اصلی
             </Link>
-            <Link color="gray.600" fontSize="md">
+            <Link
+              color="gray.600"
+              fontSize="13px"
+              _hover={{ textDecoration: 'none' }}
+            >
               جدترین پست‌ها
             </Link>
-            <Link color="gray.600" fontSize="md">
+            <Link
+              color="gray.600"
+              fontSize="13px"
+              _hover={{ textDecoration: 'none' }}
+            >
               مهندسی نرم‌افزار
             </Link>
-            <Link color="gray.600" fontSize="md">
+            <Link
+              color="gray.600"
+              fontSize="13px"
+              _hover={{ textDecoration: 'none' }}
+            >
               تجربه کاربری
             </Link>
-            <Link color="gray.600" fontSize="md">
+            <Link
+              color="gray.600"
+              fontSize="13px"
+              _hover={{ textDecoration: 'none' }}
+            >
               امنیت سایبری
+            </Link>
+            <Link
+              color="gray.600"
+              fontSize="13px"
+              _hover={{ textDecoration: 'none' }}
+            >
+              فریلنسری
+            </Link>
+            <Link
+              color="gray.600"
+              fontSize="13px"
+              _hover={{ textDecoration: 'none' }}
+            >
+              پادکست
             </Link>
           </HStack>
         </Container>
