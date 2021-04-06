@@ -1,7 +1,20 @@
-import classes from './Backdrop.module.css';
 import React from 'react';
+import { Box } from '@chakra-ui/react';
 
-const backkdrop = props =>
-  props.show && <div className={classes.Backdrop} onClick={props.close}></div>;
+const Backkdrop = ({ show, close }) => {
+  if (show) {
+    return (
+      <Box
+        onClick={close}
+        position="fixed"
+        zIndex="99"
+        top="0"
+        left="0"
+        w="full"
+        h="full"
+      />
+    );
+  }
+};
 
-export default backkdrop;
+export default Backkdrop;
