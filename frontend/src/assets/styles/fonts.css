@@ -20,6 +20,17 @@
     url('../fonts/Vazir-Light-FD.woff') format('woff');
 }
 
+/* Vazir Regular */
+@font-face {
+  font-family: Vazir;
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Vazir-Regular-FD.eot');
+  src: url('../fonts/Vazir-Regular-FD.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Vazir-Regular-FD.woff2') format('woff2'),
+    url('../fonts/Vazir-Regular-FD.woff') format('woff');
+}
+
 /* Vazir Medium */
 @font-face {
   font-family: Vazir;
