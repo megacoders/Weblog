@@ -1,7 +1,7 @@
 import React from 'react';
 
+import Navbar from '../components/Navbar/Navbar';
 import PageInfo from '../components/PageInfo';
-import Navbar from '../components/Navbar';
 
 const Home = () => {
   return (
