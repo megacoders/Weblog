@@ -1,8 +1,9 @@
-from rest_framework import permissions
 from rest_framework.generics import ListCreateAPIView
+from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 from .models import User
-from .serializers import UserSerialiser
-from blog.permissions import IsSuperUser
+from .serializers import UserSerializer
+from blog.permissions import IsStaffOrReadOnly, IsSuperUser, IsSuperUserOrStaffReadOnly
+
 
 class UserList(ListCreateAPIView):
     """
@@ -11,5 +12,11 @@ class UserList(ListCreateAPIView):
             2- Maybe this will change later, because of using django packages
     """
     queryset = User.objects.all()
-    serializer_class = UserSerialiser
+    serializer_class = UserSerializer
     permission_classes = [IsSuperUser,]
+
+
+class UserDetail(RetrieveUpdateDestroyAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+    permission_classes = (IsSuperUserOrStaffReadOnly,)
