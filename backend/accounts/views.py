@@ -1,7 +1,8 @@
+from rest_framework import permissions
 from rest_framework.generics import ListCreateAPIView
 from .models import User
 from .serializers import UserSerialiser
-
+from blog.permissions import IsSuperUser
 
 class UserList(ListCreateAPIView):
     """
@@ -11,3 +12,4 @@ class UserList(ListCreateAPIView):
     """
     queryset = User.objects.all()
     serializer_class = UserSerialiser
+    permission_classes = [IsSuperUser,]
