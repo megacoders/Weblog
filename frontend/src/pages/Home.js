@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Navbar from '../components/Navbar/Navbar';
+import FeaturedPosts from '../components/FeaturedPosts/Posts';
 import PageInfo from '../components/PageInfo';
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
         url=""
       />
       <Navbar />
+      <FeaturedPosts />
     </>
   );
 };
