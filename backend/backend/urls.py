@@ -6,4 +6,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('blog.urls')),
     path('', include('accounts.urls')),
+    # dj-rest-auth package
+    path('dj-rest-auth/', include('dj_rest_auth.urls'))
 ]

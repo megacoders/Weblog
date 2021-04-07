@@ -10,6 +10,7 @@ ALLOWED_HOSTS = []
 
 
 INSTALLED_APPS = [
+    'django.contrib.sites',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -22,9 +23,15 @@ INSTALLED_APPS = [
     'accounts.apps.AccountsConfig',
 
     # ThirdPartyApps
-    'rest_framework',
+    'rest_framework.authtoken',
+    'dj_rest_auth',
+    'allauth',
+    'allauth.account',
+    'dj_rest_auth.registration',
     'corsheaders',
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
@@ -110,3 +117,17 @@ AUTH_USER_MODEL = 'accounts.User'
 
 # Custom
 MAX_UPLOAD_ADMIN_SIZE = 2097152  # 2 MB (2000000)
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'dj_rest_auth.jwt_auth.JWTCookieAuthentication',
+    )
+}
+
+REST_USE_JWT = True
+
+JWT_AUTH_COOKIE = 'access'
+JWT_AUTH_REFRESH_COOKIE = 'refresh'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
