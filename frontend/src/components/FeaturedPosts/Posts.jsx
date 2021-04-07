@@ -21,7 +21,11 @@ const Posts = () => {
       <Heading as="h2" fontSize="1.5rem">
         برجسته‌ترین پست‌ها
       </Heading>
-      <Grid templateColumns="repeat(2, 1fr)" gap={5} mt="5">
+      <Grid
+        templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' }}
+        gap={5}
+        mt="5"
+      >
         {featuredPosts.map(post => (
           <Link key={post.id}>
             <GridItem
