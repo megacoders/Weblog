@@ -1,7 +1,5 @@
 from rest_framework import serializers
 from .models import Article
-# from accounts.models import User
-from backend.accounts.models import User
 
 
 class ArticleSerializer(serializers.ModelSerializer):
