@@ -1,6 +1,6 @@
 from django.db import models
 from django.core.files.images import get_image_dimensions
-from accounts.models import User # not created yet
+from backend.accounts.models import User # not created yet
 from django.conf import settings
 
 

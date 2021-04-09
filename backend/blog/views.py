@@ -1,7 +1,7 @@
 from rest_framework.generics import ListAPIView, ListCreateAPIView
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 from .models import Article
-from .serializers import ArticleSerializer, UserSerializer
+from .serializers import ArticleSerializer
 from .permissions import IsStaffOrReadOnly, IsSuperUser, IsSuperUserOrStaffReadOnly
 
 
