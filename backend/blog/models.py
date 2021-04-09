@@ -24,6 +24,7 @@ class Article(models.Model):
             1- The user models is not created, 
             2- The author field must be null because of on_delete
             3- The descritpion will change to ckediter fields
+            4- With is_active field, we will filter the articles
     """
     STATUS_CHOICES = (
         ('d', 'draft'),
@@ -37,6 +38,7 @@ class Article(models.Model):
     cover = models.ImageField(upload_to='backend/media')
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+    is_active = models.BooleanField(default=True)
 
     def __str__(self):
         return f'{self.author} created {self.title}'

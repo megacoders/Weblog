@@ -40,18 +40,3 @@ class IsAuthorOrReadOnly(BasePermission):
             # get access to author of objet
             obj.author == request.user
         )
-
-
-# class IsTeamMember(BasePermission):
-#     """
-#         NOTE:
-#             1- Check if the user is team member or not
-#     """
-#     def has_object_permission(self, request, view, obj):
-#         if request.method in SAFE_METHODS:
-#             return True
-#
-#         return bool(
-#             request.user.is_authenticated and
-#             request.user.team_member
-#         )
