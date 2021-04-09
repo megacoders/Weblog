@@ -1,14 +1,8 @@
 from rest_framework.generics import  RetrieveUpdateDestroyAPIView
 from rest_framework.viewsets import ModelViewSet
 from .models import Article
-from .serializers import ArticleSerializer
+from .serializers import ArticleSerializer, CategorySerializer
 from .permissions import IsStaffOrReadOnly, IsSuperUser, IsSuperUserOrStaffReadOnly
-
-
-# class ArticleList(ListAPIView):
-#     queryset = Article.objects.all()
-#     serializer_class = ArticleSerializer
-#
 
 
 class ArticleViewSet(ModelViewSet):
@@ -21,3 +15,8 @@ class ArticleDetail(RetrieveUpdateDestroyAPIView):
     queryset = Article.objects.all()
     serializer_class = ArticleSerializer
     permission_classes = (IsStaffOrReadOnly, )
+
+
+class CategoryViewSet(ModelViewSet):
+    queryset = Article.objects.all()
+    serializer_class = CategorySerializer
