@@ -27,7 +27,7 @@ const Posts = () => {
         mt="5"
       >
         {featuredPosts.map(post => (
-          <Link key={post.id}>
+          <Link to={post.link} key={post.id}>
             <GridItem
               as="article"
               bg="gray.50"

@@ -9,3 +9,7 @@ h5,
 h6 {
   font-family: inherit !important;
 }
+
+a:focus {
+  outline: none;
+}

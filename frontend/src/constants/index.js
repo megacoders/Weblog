@@ -1,3 +1,13 @@
+export const navItems = [
+  { id: 1, text: 'صفحه اصلی', link: '/' },
+  { id: 2, text: 'جدترین پست‌ها', link: '/latest-posts' },
+  { id: 3, text: 'مهندسی نرم‌افزار', link: '/topic/programming' },
+  { id: 4, text: 'تجربه کاربری', link: '/topic/ux-ux' },
+  { id: 5, text: 'امنیت سایبری', link: '/topic/security' },
+  { id: 6, text: 'فریلنسری', link: '/topic/freelancing' },
+  { id: 7, text: 'پادکست', link: '/topic/podcast' },
+];
+
 export const featuredPosts = [
   {
     id: 1,
@@ -7,6 +17,7 @@ export const featuredPosts = [
     author: 'محمد زمانی',
     createdDate: '۶ روز پیش',
     readingTime: 'خواندن 4 دقیقه',
+    link: 'asemon-karesh-tamome',
   },
   {
     id: 2,
@@ -16,6 +27,7 @@ export const featuredPosts = [
     author: 'ربات مترجم در وبلاگ ترجمیار',
     createdDate: '23 ساعت پیش',
     readingTime: 'خواندن 9 دقیقه',
+    link: 'karbord-haye-yadgiri-mashine',
   },
   {
     id: 3,
@@ -25,6 +37,7 @@ export const featuredPosts = [
     author: 'رضا محمدی',
     createdDate: '19 ساعت پیش',
     readingTime: 'خواندن 2 دقیقه',
+    link: 'barnamenevisi-chee',
   },
   {
     id: 4,
@@ -34,5 +47,6 @@ export const featuredPosts = [
     author: 'ربات مترجم در وبلاگ ترجمیار',
     createdDate: '3 روز پیش',
     readingTime: 'خواندن 4 دقیقه',
+    link: '10-shecat-bartar-rayanesh-quantum-dar-sal-2021',
   },
 ];
