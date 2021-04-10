@@ -93,3 +93,38 @@ export const posts = [
     link: '10-shecat-bartar-rayanesh-quantum-dar-sal-2021',
   },
 ];
+
+export const bookmarks = [
+  {
+    id: 1,
+    value: 75,
+    title: 'چک لیست یک برنامه نویس Clean Code',
+    author: 'اسماعیل احمدی پور',
+    link: 'checklist-clean-code',
+    profile: 'esmaeil',
+  },
+  {
+    id: 2,
+    value: 35,
+    title: 'چطور در برنامه نویسی پیشرفت کنیم؟',
+    author: 'امیرمحمّد مصدقی',
+    link: 'chetor-dar-barnamenevisi-pishraft-konim',
+    profile: 'amir',
+  },
+  {
+    id: 3,
+    value: 95,
+    title: 'چگونه یک توسعه دهنده متوسط ​​نباشیم!',
+    author: 'صالح رضائی',
+    link: 'pro-developer',
+    profile: 'saleh',
+  },
+  {
+    id: 4,
+    value: 50,
+    title: 'عملگرهای spread و rest در جاوا اسکریپت',
+    author: 'علی محمدعلی رجب',
+    link: 'spreat-rest-javascript',
+    profile: 'ali',
+  },
+];

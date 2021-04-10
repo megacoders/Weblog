@@ -18,7 +18,7 @@ const Home = () => {
       />
       <Navbar />
       <FeaturedPosts />
-      <Container maxW="container.md">
+      <Container maxW="container.lg">
         <Divider mb="10" />
         <Flex>
           <PostsList />

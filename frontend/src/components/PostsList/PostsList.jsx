@@ -5,7 +5,7 @@ import Post from './Post';
 
 const PostsList = () => {
   return (
-    <VStack as="ul" flex="3" listStyleType="none" pr="10" spacing="5">
+    <VStack as="ul" flex="2" listStyleType="none" pr="10" spacing="5">
       {posts.map(post => (
         <Post
           key={post.id}
