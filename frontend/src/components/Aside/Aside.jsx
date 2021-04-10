@@ -14,7 +14,7 @@ import { bookmarks } from '../../constants';
 
 const Aside = () => {
   return (
-    <Box as="aside" flex="1">
+    <Box as="aside" display={{ base: 'none', md: 'block' }} flex="1">
       <Flex
         roundedTop="md"
         as="header"
