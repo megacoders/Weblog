@@ -8,7 +8,7 @@ class ArticleSerializer(serializers.ModelSerializer):
         fields = ['author', 'category', 'title', 'description', 'cover', 'created', 'updated']
 
 
-class CategorySerializer(serializers.Serializer):
+class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
-        fields = ('name', 'slug')
+        fields = '__all__'
