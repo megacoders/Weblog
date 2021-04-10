@@ -18,7 +18,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Local apps
-    'blog.apps.BlogConfig', # This app will handle api stuffs
+    'api.apps.ApiConfig', # This app will handle api stuffs
     'accounts.apps.AccountsConfig',
 
     # ThirdPartyApps
@@ -123,7 +123,7 @@ MAX_UPLOAD_ADMIN_SIZE = 2097152  # 2 MB (2000000)
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
-        'blog.permissions.IsStaffOrReadOnly',
+        'api.permissions.IsStaffOrReadOnly',
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': [
         # 'rest_framework.authentication.TokenAuthentication',

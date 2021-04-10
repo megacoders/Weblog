@@ -7,8 +7,8 @@ from .views import (
 
 
 router = routers.SimpleRouter()
-router.register('list', ArticleViewSet, basename="articles")
-router.register('c', CategoryViewSet, basename="categories")
+router.register('articles_list', ArticleViewSet, basename="articles")
+router.register('categories', CategoryViewSet, basename="categories")
 
 
 urlpatterns = [

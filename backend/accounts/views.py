@@ -1,7 +1,7 @@
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 from .models import User
 from .serializers import UserSerializer
-from blog.permissions import (
+from api.permissions import (
     IsStaffOrReadOnly,
     IsSuperUser,
     IsSuperUserOrStaffReadOnly

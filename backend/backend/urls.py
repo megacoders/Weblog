@@ -4,7 +4,7 @@ from dj_rest_auth.views import PasswordResetConfirmView
 
 
 urlpatterns = [
-    path('', include('blog.urls')),
+    path('', include('api.urls')),
     path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls')),
     # dj-rest-auth package
