@@ -18,7 +18,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Local apps
-    'api.apps.ApiConfig', # This app will handle api stuffs
+    'api.apps.ApiConfig',
     'accounts.apps.AccountsConfig',
 
     # ThirdPartyApps
@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'dj_rest_auth.registration',
     'corsheaders',
+    'ckeditor',
 ]
 
 SITE_ID = 1

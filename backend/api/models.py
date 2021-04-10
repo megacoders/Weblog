@@ -2,6 +2,7 @@ from django.db import models
 from django.core.files.images import get_image_dimensions
 from accounts.models import User # not created yet
 from django.conf import settings
+from ckeditor.fields import RichTextField
 
 
 def validate_cover(value):
@@ -35,7 +36,7 @@ class Article(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     title = models.CharField(max_length=250)
     slug = models.SlugField(unique=True)
-    description = models.TextField()
+    description = RichTextField()
     cover = models.ImageField(upload_to='backend/media')
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
@@ -59,4 +60,3 @@ class ContactUsModel(models.Model):
 
     def __str__(self):
         return self.title
-
