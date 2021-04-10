@@ -1,4 +1,3 @@
-import React from 'react';
 import { Avatar, Box } from '@chakra-ui/react';
 
 import UserProfile from '../../assets/images/user.png';

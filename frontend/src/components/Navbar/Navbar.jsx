@@ -1,15 +1,17 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import { AiOutlineSearch } from 'react-icons/ai';
 import {
   Box,
   Container,
   HStack,
+  Image,
   Input,
   InputGroup,
   InputRightElement,
-  Link,
-  Text,
 } from '@chakra-ui/react';
+
+import './Navbar.css';
+import { navItems } from '../../constants';
 
 import ProfileMenu from './ProfileMenu';
 import SideDrawer from './SideDrawer';
@@ -30,9 +32,9 @@ const Navbar = () => {
             alignItems="center"
             justifyContent="space-between"
           >
-            <Text as="h1" fontSize="lg">
-              وبلاگ
-            </Text>
+            <Link to="/">
+              <Image width="12" src="/img/logo.png" alt="لوگو ویرگول" />
+            </Link>
             <Box display="flex" alignItems="center">
               <InputGroup w="72" margin="0 1rem 0 0">
                 <InputRightElement pointerEvents="none">
@@ -44,55 +46,11 @@ const Navbar = () => {
             </Box>
           </Box>
           <HStack as="nav" spacing="4">
-            <Link
-              color="gray.600"
-              fontSize="13px"
-              _hover={{ textDecoration: 'none' }}
-            >
-              صفحه اصلی
-            </Link>
-            <Link
-              color="gray.600"
-              fontSize="13px"
-              _hover={{ textDecoration: 'none' }}
-            >
-              جدترین پست‌ها
-            </Link>
-            <Link
-              color="gray.600"
-              fontSize="13px"
-              _hover={{ textDecoration: 'none' }}
-            >
-              مهندسی نرم‌افزار
-            </Link>
-            <Link
-              color="gray.600"
-              fontSize="13px"
-              _hover={{ textDecoration: 'none' }}
-            >
-              تجربه کاربری
-            </Link>
-            <Link
-              color="gray.600"
-              fontSize="13px"
-              _hover={{ textDecoration: 'none' }}
-            >
-              امنیت سایبری
-            </Link>
-            <Link
-              color="gray.600"
-              fontSize="13px"
-              _hover={{ textDecoration: 'none' }}
-            >
-              فریلنسری
-            </Link>
-            <Link
-              color="gray.600"
-              fontSize="13px"
-              _hover={{ textDecoration: 'none' }}
-            >
-              پادکست
-            </Link>
+            {navItems.map(item => (
+              <Link key={item.id} to={item.link} className="main-nav__link">
+                {item.text}
+              </Link>
+            ))}
           </HStack>
         </Container>
       </Box>

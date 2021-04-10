@@ -1,3 +1,13 @@
+export const navItems = [
+  { id: 1, text: 'صفحه اصلی', link: '/' },
+  { id: 2, text: 'جدترین پست‌ها', link: '/latest-posts' },
+  { id: 3, text: 'مهندسی نرم‌افزار', link: '/topic/programming' },
+  { id: 4, text: 'تجربه کاربری', link: '/topic/ux-ux' },
+  { id: 5, text: 'امنیت سایبری', link: '/topic/security' },
+  { id: 6, text: 'فریلنسری', link: '/topic/freelancing' },
+  { id: 7, text: 'پادکست', link: '/topic/podcast' },
+];
+
 export const featuredPosts = [
   {
     id: 1,
@@ -7,6 +17,7 @@ export const featuredPosts = [
     author: 'محمد زمانی',
     createdDate: '۶ روز پیش',
     readingTime: 'خواندن 4 دقیقه',
+    link: 'asemon-karesh-tamome',
   },
   {
     id: 2,
@@ -16,6 +27,7 @@ export const featuredPosts = [
     author: 'ربات مترجم در وبلاگ ترجمیار',
     createdDate: '23 ساعت پیش',
     readingTime: 'خواندن 9 دقیقه',
+    link: 'karbord-haye-yadgiri-mashine',
   },
   {
     id: 3,
@@ -25,6 +37,7 @@ export const featuredPosts = [
     author: 'رضا محمدی',
     createdDate: '19 ساعت پیش',
     readingTime: 'خواندن 2 دقیقه',
+    link: 'barnamenevisi-chee',
   },
   {
     id: 4,
@@ -34,5 +47,84 @@ export const featuredPosts = [
     author: 'ربات مترجم در وبلاگ ترجمیار',
     createdDate: '3 روز پیش',
     readingTime: 'خواندن 4 دقیقه',
+    link: '10-shecat-bartar-rayanesh-quantum-dar-sal-2021',
+  },
+];
+
+export const posts = [
+  {
+    id: 1,
+    img: 'post-1.jpg',
+    title: 'آسمون کارش تمومه',
+    description: 'بدون شک تصمیمات تک تک ما در آینده سیاره آبی تاثیر گذار است.',
+    author: 'محمد زمانی',
+    createdDate: '۶ روز پیش',
+    readingTime: 'خواندن 4 دقیقه',
+    link: 'asemon-karesh-tamome',
+  },
+  {
+    id: 2,
+    img: 'post-2.jpg',
+    title: 'کاربردهای یادگیری ماشین',
+    description: 'ساخت آن و مهارت‌های مورد نیاز',
+    author: 'ربات مترجم در وبلاگ ترجمیار',
+    createdDate: '23 ساعت پیش',
+    readingTime: 'خواندن 9 دقیقه',
+    link: 'karbord-haye-yadgiri-mashine',
+  },
+  {
+    id: 3,
+    img: 'post-3.jpg',
+    title: 'برنامه نویسی چیه؟!',
+    description: 'برنامه نویسی چیه؟ و به چه درد ما میخوره ؟ یک تعریف خودمونی',
+    author: 'رضا محمدی',
+    createdDate: '19 ساعت پیش',
+    readingTime: 'خواندن 2 دقیقه',
+    link: 'barnamenevisi-chee',
+  },
+  {
+    id: 4,
+    img: 'post-4.jpg',
+    title: '۱۰ شرکت برتر رایانش کوانتومی در سال ۲۰۲۱',
+    description: 'معرفی و بررسی شرکت‌های برتر محاسبات کوانتومی',
+    author: 'ربات مترجم در وبلاگ ترجمیار',
+    createdDate: '3 روز پیش',
+    readingTime: 'خواندن 4 دقیقه',
+    link: '10-shecat-bartar-rayanesh-quantum-dar-sal-2021',
+  },
+];
+
+export const bookmarks = [
+  {
+    id: 1,
+    value: 75,
+    title: 'چک لیست یک برنامه نویس Clean Code',
+    author: 'اسماعیل احمدی پور',
+    link: 'checklist-clean-code',
+    profile: 'esmaeil',
+  },
+  {
+    id: 2,
+    value: 35,
+    title: 'چطور در برنامه نویسی پیشرفت کنیم؟',
+    author: 'امیرمحمّد مصدقی',
+    link: 'chetor-dar-barnamenevisi-pishraft-konim',
+    profile: 'amir',
+  },
+  {
+    id: 3,
+    value: 95,
+    title: 'چگونه یک توسعه دهنده متوسط ​​نباشیم!',
+    author: 'صالح رضائی',
+    link: 'pro-developer',
+    profile: 'saleh',
+  },
+  {
+    id: 4,
+    value: 50,
+    title: 'عملگرهای spread و rest در جاوا اسکریپت',
+    author: 'علی محمدعلی رجب',
+    link: 'spreat-rest-javascript',
+    profile: 'ali',
   },
 ];
