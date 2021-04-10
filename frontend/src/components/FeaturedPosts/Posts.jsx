@@ -39,7 +39,7 @@ const Posts = () => {
               overflow="hidden"
             >
               <Box flex="1">
-                <Link>
+                <Link to={post.link}>
                   <Image
                     w="full"
                     h="full"
@@ -57,7 +57,7 @@ const Posts = () => {
                 flexDir="column"
                 justifyContent="space-between"
               >
-                <Link>
+                <Link to={post.link}>
                   <Heading
                     as="h3"
                     title={post.title}
@@ -84,7 +84,7 @@ const Posts = () => {
                       fontSize="0.8rem"
                       fontWeight="normal"
                     >
-                      <Link>{post.author}</Link>
+                      <Link to={post.link}>{post.author}</Link>
                     </Heading>
                     <HStack spacing="1" fontSize="0.7rem" color="gray.600">
                       <span>{post.createdDate}</span>
