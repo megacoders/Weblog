@@ -50,3 +50,46 @@ export const featuredPosts = [
     link: '10-shecat-bartar-rayanesh-quantum-dar-sal-2021',
   },
 ];
+
+export const posts = [
+  {
+    id: 1,
+    img: 'post-1.jpg',
+    title: 'آسمون کارش تمومه',
+    description: 'بدون شک تصمیمات تک تک ما در آینده سیاره آبی تاثیر گذار است.',
+    author: 'محمد زمانی',
+    createdDate: '۶ روز پیش',
+    readingTime: 'خواندن 4 دقیقه',
+    link: 'asemon-karesh-tamome',
+  },
+  {
+    id: 2,
+    img: 'post-2.jpg',
+    title: 'کاربردهای یادگیری ماشین',
+    description: 'ساخت آن و مهارت‌های مورد نیاز',
+    author: 'ربات مترجم در وبلاگ ترجمیار',
+    createdDate: '23 ساعت پیش',
+    readingTime: 'خواندن 9 دقیقه',
+    link: 'karbord-haye-yadgiri-mashine',
+  },
+  {
+    id: 3,
+    img: 'post-3.jpg',
+    title: 'برنامه نویسی چیه؟!',
+    description: 'برنامه نویسی چیه؟ و به چه درد ما میخوره ؟ یک تعریف خودمونی',
+    author: 'رضا محمدی',
+    createdDate: '19 ساعت پیش',
+    readingTime: 'خواندن 2 دقیقه',
+    link: 'barnamenevisi-chee',
+  },
+  {
+    id: 4,
+    img: 'post-4.jpg',
+    title: '۱۰ شرکت برتر رایانش کوانتومی در سال ۲۰۲۱',
+    description: 'معرفی و بررسی شرکت‌های برتر محاسبات کوانتومی',
+    author: 'ربات مترجم در وبلاگ ترجمیار',
+    createdDate: '3 روز پیش',
+    readingTime: 'خواندن 4 دقیقه',
+    link: '10-shecat-bartar-rayanesh-quantum-dar-sal-2021',
+  },
+];

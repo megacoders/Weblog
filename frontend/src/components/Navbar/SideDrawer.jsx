@@ -1,4 +1,4 @@
-import React from 'react';
+import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { CgMenuGridO } from 'react-icons/cg';
 import { AiOutlineSearch } from 'react-icons/ai';
@@ -24,7 +24,7 @@ import { navItems } from '../../constants';
 import ProfileMenu from './ProfileMenu';
 
 const SideDrawer = () => {
-  const btnRef = React.useRef();
+  const btnRef = useRef();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (

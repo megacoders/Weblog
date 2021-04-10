@@ -1,8 +1,10 @@
-import React from 'react';
+import { Container, Divider, Flex } from '@chakra-ui/react';
 
-import Navbar from '../components/Navbar/Navbar';
+import Aside from '../components/Aside/Aside';
 import FeaturedPosts from '../components/FeaturedPosts/Posts';
+import Navbar from '../components/Navbar/Navbar';
 import PageInfo from '../components/PageInfo';
+import PostsList from '../components/PostsList/PostsList';
 
 const Home = () => {
   return (
@@ -16,6 +18,13 @@ const Home = () => {
       />
       <Navbar />
       <FeaturedPosts />
+      <Container maxW="container.md">
+        <Divider mb="10" />
+        <Flex>
+          <PostsList />
+          <Aside />
+        </Flex>
+      </Container>
     </>
   );
 };

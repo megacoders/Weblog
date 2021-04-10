@@ -1,4 +1,3 @@
-import React from 'react';
 import SimpleBar from 'simplebar-react';
 import { render } from 'react-dom';
 import { ChakraProvider } from '@chakra-ui/react';
