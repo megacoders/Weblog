@@ -48,10 +48,15 @@ class Article(models.Model):
 class AboutUsModel(models.Model):
     text = models.TextField()
 
+    def __str__(self):
+        return self.text[:10]
+
 
 class ContactUsModel(models.Model):
     title = models.CharField(max_length=100)
     phone = models.IntegerField()
     body = models.TextField()
 
+    def __str__(self):
+        return self.title
 

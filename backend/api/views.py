@@ -7,7 +7,6 @@ from .permissions import IsStaffOrReadOnly, IsSuperUser, IsSuperUserOrStaffReadO
 
 
 class ArticleViewSet(ModelViewSet):
-    # queryset = Article.objects.filter(is_active=True)  # is_active field is not created
     queryset = Article.objects.filter(is_active=True)
     serializer_class = ArticleSerializer
 
@@ -21,4 +20,3 @@ class ArticleDetail(RetrieveUpdateDestroyAPIView):
 class CategoryViewSet(ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
-    # permission_classes = (IsStaffOrReadOnly,)
