@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { CgMenuGridO } from 'react-icons/cg';
 import { AiOutlineSearch } from 'react-icons/ai';
 import {
@@ -10,14 +11,16 @@ import {
   DrawerContent,
   DrawerHeader,
   DrawerOverlay,
+  Image,
   Input,
   InputGroup,
   InputRightElement,
-  Link,
   useDisclosure,
   VStack,
 } from '@chakra-ui/react';
 
+import './SideDrawer.css';
+import { navItems } from '../../constants';
 import ProfileMenu from './ProfileMenu';
 
 const SideDrawer = () => {
@@ -43,8 +46,8 @@ const SideDrawer = () => {
         >
           <CgMenuGridO color="white" size="30" />
         </Button>
-        <Link color="white" fontSize="xl" _hover={{ textDecoration: 'none' }}>
-          وبلاگ
+        <Link to="/">
+          <Image width="12" src="/img/logo.png" alt="لوگو ویرگول" />
         </Link>
         <ProfileMenu />
       </Box>
@@ -66,86 +69,11 @@ const SideDrawer = () => {
                 <Input type="text" placeholder="دنبال چی میگردی؟" />
               </InputGroup>
               <VStack as="nav" spacing="1" alignItems="end" my="4">
-                <Link
-                  w="full"
-                  p="2"
-                  userSelect="none"
-                  color="gray.600"
-                  fontSize="md"
-                  display="block"
-                  rounded="md"
-                  _hover={{
-                    textDecoration: 'none',
-                    bg: 'gray.100',
-                  }}
-                  _active={{ bg: 'gray.200' }}
-                >
-                  صفحه اصلی
-                </Link>
-                <Link
-                  w="full"
-                  p="2"
-                  userSelect="none"
-                  color="gray.600"
-                  fontSize="md"
-                  display="block"
-                  rounded="md"
-                  _hover={{
-                    textDecoration: 'none',
-                    bg: 'gray.100',
-                  }}
-                  _active={{ bg: 'gray.200' }}
-                >
-                  جدید ترین پست‌ها
-                </Link>
-                <Link
-                  w="full"
-                  p="2"
-                  userSelect="none"
-                  color="gray.600"
-                  fontSize="md"
-                  display="block"
-                  rounded="md"
-                  _hover={{
-                    textDecoration: 'none',
-                    bg: 'gray.100',
-                  }}
-                  _active={{ bg: 'gray.200' }}
-                >
-                  مهندسی نرم‌افزار
-                </Link>
-                <Link
-                  w="full"
-                  p="2"
-                  userSelect="none"
-                  color="gray.600"
-                  fontSize="md"
-                  display="block"
-                  rounded="md"
-                  _hover={{
-                    textDecoration: 'none',
-                    bg: 'gray.100',
-                  }}
-                  _active={{ bg: 'gray.200' }}
-                >
-                  تجربه کاربری
-                </Link>
-                <Link
-                  w="full"
-                  p="2"
-                  userSelect="none"
-                  color="gray.600"
-                  fontSize="md"
-                  display="block"
-                  rounded="md"
-                  _hover={{
-                    textDecoration: 'none',
-                    bg: 'gray.100',
-                  }}
-                  _active={{ bg: 'gray.200' }}
-                >
-                  امنیت سایبری
-                </Link>
+                {navItems.map(item => (
+                  <Link key={item.id} to={item.link} className="nav-item">
+                    {item.text}
+                  </Link>
+                ))}
               </VStack>
             </DrawerBody>
           </DrawerContent>

@@ -1,0 +1,5 @@
+.main-nav__link {
+  font-size: 13px;
+  text-decoration: none;
+  color: var(--chakra-colors-gray-600);
+}
