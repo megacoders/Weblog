@@ -13,7 +13,7 @@ def validate_cover(value):
 
 class Category(models.Model):
     name = models.CharField(max_length=100)
-    slug = models.SlugField(max_length=100)
+    slug = models.SlugField(max_length=100, unique=True)
     is_active = models.BooleanField(default=True)
 
     def __str__(self):

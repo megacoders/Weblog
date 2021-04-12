@@ -1,6 +1,6 @@
 from rest_framework import serializers
-from .models import Article, Category
 from accounts.models import User
+from .models import Article, Category
 
 
 class AuthorSerializer(serializers.ModelSerializer):
@@ -14,7 +14,7 @@ class ArticleSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Article
-        fields = ['author', 'category', 'title', 'description', 'cover', 'created', 'updated']
+        fields = ['id', 'author', 'category', 'title', 'description', 'cover', 'created', 'updated']
 
 
 class CategorySerializer(serializers.ModelSerializer):
