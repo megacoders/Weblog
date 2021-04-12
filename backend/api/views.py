@@ -26,6 +26,10 @@ class CategoryViewSet(ModelViewSet):
 
 
 class ArticleCategory(APIView):
+    """
+    This view will filter and show
+    the articles by their category
+    """
     def get(self, request, category):
         category = self.kwargs['category']
         category_model = get_object_or_404(Category, slug=category)
