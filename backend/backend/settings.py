@@ -124,7 +124,7 @@ MAX_UPLOAD_ADMIN_SIZE = 2097152  # 2 MB (2000000)
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
-        'api.permissions.IsStaffOrReadOnly',
+        'api.permissions.IsSuperUser',
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': [
         # 'rest_framework.authentication.TokenAuthentication',

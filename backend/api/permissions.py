@@ -40,3 +40,4 @@ class IsAuthorOrReadOnly(BasePermission):
             # get access to author of object
             obj.author == request.user
         )
+

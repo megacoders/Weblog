@@ -1,12 +1,11 @@
-from django.shortcuts import get_object_or_404
 from rest_framework.response import Response
 from rest_framework.generics import RetrieveUpdateDestroyAPIView
 from rest_framework.viewsets import ModelViewSet
-from rest_framework.generics import ListCreateAPIView
 from rest_framework.views import  APIView
+from django.shortcuts import get_object_or_404
 from .models import Article, Category
 from .serializers import ArticleSerializer, CategorySerializer
-from .permissions import IsStaffOrReadOnly, IsSuperUser, IsSuperUserOrStaffReadOnly
+from .permissions import IsStaffOrReadOnly, IsSuperUser
 
 
 class ArticleViewSet(ModelViewSet):
@@ -17,10 +16,12 @@ class ArticleViewSet(ModelViewSet):
 class ArticleDetail(RetrieveUpdateDestroyAPIView):
     queryset = Article.objects.filter(is_active=True)
     serializer_class = ArticleSerializer
-    permission_classes = (IsStaffOrReadOnly,)
 
 
 class CategoryViewSet(ModelViewSet):
+    """
+    Showing all categries
+    """
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
 
