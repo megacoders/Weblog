@@ -1,8 +1,9 @@
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { BiChevronLeft } from 'react-icons/bi';
 import { Box, Button, Heading, Input, Text, VStack } from '@chakra-ui/react';
 
-const Form = () => {
+const Form = ({ account }) => {
   return (
     <Box
       as="section"
@@ -49,7 +50,10 @@ const Form = () => {
             color="#aaa"
             variant="link"
             fontWeight="normal"
+            onClick={account}
             _hover={{ textDecor: 'none' }}
+            _active={{ color: '#aaa' }}
+            _focus={{ boxShadow: 'none' }}
           >
             ورود با اکانت{' '}
             <Text color="red.500" ml="1">
@@ -79,6 +83,10 @@ const Form = () => {
       </VStack>
     </Box>
   );
+};
+
+Form.propTypes = {
+  account: PropTypes.func,
 };
 
 export default Form;
